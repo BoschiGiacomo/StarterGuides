@@ -19,4 +19,5 @@ This project exists to create, update, and share Starter Guides that help univer
 
 ### Compiled guides
 - After updating a guide, compile it and place the resulting PDF into the `CompiledGuides` folder so that the final versions are easy to find and ready to distribute.
+- The guides inside `CompiledGuides` are considered "ready to distribute" versions, so please don't replace the .pdf guide in there with an unfinished version.
 - Keep the `CompiledGuides` folder organized by using the name of the `.tex` file as the name of the guide and replace the old version with the new one when updating them.
