@@ -1,0 +1,324 @@
+% ---------------------------------------------------------------------------- %
+%                           Intro to DS Starter Guide                          %
+% ---------------------------------------------------------------------------- %
+%
+%
+% This document is meant as a starter guide for people approaching MATLAB and
+% the course "Introduction to Data Science" for the first time. It is intended
+% to offer guidance on the first step while approaching the subject. 
+% ---------------------------------------------------------------------------- %
+% Covered topics: - MATLAB installation 
+%                 - Buying the textbook 
+%                 - Github, account creation and repository of the book 
+%                 - Youtube Channel where the lessons are published
+%
+% --------------------------------- Preamble --------------------------------- %
+\documentclass[a4paper, 12pt]{article}
+\usepackage{graphicx}
+\usepackage[english]{babel}
+\usepackage{url}
+\usepackage{microtype}
+\usepackage[indent=0pt]{parskip} %par skips a line and remove paragraphs indent
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, 
+            linkcolor=blue, 
+            citecolor=blue, 
+            urlcolor=blue
+            }
+\usepackage{caption}
+\usepackage{subcaption}
+\captionsetup[figure]{labelformat=empty}
+% \captionsetup[subfigure]{labelformat=empty}
+\usepackage{csquotes}
+\usepackage{listings}
+
+\lstset{basicstyle=\normalsize\ttfamily,breaklines=false}
+%\lstset{framextopmargin=50pt,frame=bottomline}
+
+% \usepackage{mcode}
+% ---------------------------------------------------------------------------- %
+% title information
+\title{Introduction to Data Science\\
+\large{Starter Guide}}
+\date{}
+\author{}
+% table of contents
+\addto\captionsenglish{\renewcommand{\contentsname}{Contents of this guide:}}
+% directory of the images
+\graphicspath{{Images/}}
+% ----------------------------- start of document ---------------------------- %
+\begin{document}
+\maketitle % Title
+% introduction
+\begin{center}
+\begin{minipage}{0.95\textwidth}
+\textbf{Need help?} \hfill \break
+If you encounter any difficulties with installation or course materials,
+remember that support is available. You can always ask questions and receive
+help from your classmates and the professor via the GitHub Issues page described
+later in this guide. \hfill
+\end{minipage}
+\end{center}
+
+%Table of Contents
+\tableofcontents
+
+% Start of document
+\newpage
+\section{MATLAB license and installation}
+First of all, to install MATLAB you will need to have a valid MATLAB license; if
+you already have the University email, you don't need to worry about this, and
+can skip to the section titled
+\hyperref[sec:Installation]{\enquote{Installation}} below.
+
+\subsection{Creating a MATLAB account}
+Since you don't have your university email yet. You will need to create a
+MathWorks account with your personal email, to exercise on MATLAB, while you
+wait to receive the University email.
+
+\begin{enumerate}
+	\item Go on \url{https://www.mathworks.com/} and click on
+	      \href{https://login.mathworks.com/embedded-login/landing.html?cid=getmatlab&s_tid=gn_getml}
+	      {\enquote{Get MATLAB}} banner at the top of the page.
+	      	      	      	      
+	      \includegraphics[trim= 15cm 2cm 0 0, clip, width=.9\textwidth]{MatAcc1.png}
+	      	      	      	      
+	\item Click on \textbf{Create account}, and insert your personal email.\hfill \break
+	      Sometimes you will be asked to make sure that this is your
+	      organization's email, ignore that and select \enquote{continue anyway}
+	      	      	      	      
+	      \begin{minipage}{0.46\textwidth}
+	      	\centering
+	      	\includegraphics[width=\textwidth]{MatAcc2.png}
+	      \end{minipage}%
+	      \begin{minipage}{0.46\textwidth}
+	      	\centering
+	      	\includegraphics[trim= 0 0 0 2cm, clip, width=\textwidth]{MatAcc3.png}
+	      \end{minipage}
+	      	      
+	\item Create a password for your account
+	\item You will now be asked to verify your email. An email containing
+	      a verification code will be sent to the email address you used to create the
+	      account. Just copy the code inside the email and paste it in the box
+	      as required. If you are not getting the email, check in the spam
+	      folder.
+		  \newpage
+
+	\item Next, you will need to insert some personal information to
+	      complete your account. You will also be asked if you are a student and
+	      which department are you from. This is how i suggest to fill those
+	      boxes:
+	      \begin{itemize}
+	      	\item Which best describes you? $\rightarrow$ Student
+	      	\item Department $\rightarrow$ Business, Economics and Finance
+	      	\item Which best describes your role? $\rightarrow$ Student (Graduate-level)
+	      \end{itemize}
+	\item Congratulations, your account should be all set!\hfill \break
+	      Proceed to the next part of the guide to get your MATLAB trial license!
+\end{enumerate}
+
+\subsection{Getting a MATLAB license}
+If you are still waiting to receive your University email, then you will have to
+ask for a trial version of 30 days to be able to exercise while you wait. In
+this section we will cover how to get a Free 30 day trial version of MATLAB.\par
+
+\begin{enumerate}
+	\item First things first, to get your 30 days trial, you need to visit the official
+	      MathWorks website, at \href{https://www.mathworks.com/}{www.mathworks.com} and scroll down until you
+	      see the free trial banner.
+	      
+	      \includegraphics[trim=0 5cm 0 3cm,clip,width=.9\textwidth]{MathworksTrial_Marked.png}
+	      
+	\item After clicking the \enquote{Start now} box, you will be brought to a page that looks
+	      like this:
+	      
+	      \includegraphics[trim= 5cm 0 0 0, clip, width=.9\textwidth]{MathworksTrial2_Marked.png}
+	      \newpage
+
+	\item You will now be asked to fill some personal details, here is some
+	      guidance on how to fill some of the fields:
+	      
+	      \begin{itemize}
+	      	\item \textbf{\enquote{Is this request on behalf of a faculty member or research
+	      	      advisor?}} $\rightarrow$ Check \enquote{No}
+	      	\item \textbf{\enquote{How will you use your trial?}} $\rightarrow$ MATLAB Essentials
+	      \end{itemize}
+	\item Your license should be activated! Proceed to the
+	      \hyperref[sec:Installation]{installation} section
+\end{enumerate}
+
+\subsection{Installation}
+\label{sec:Installation}
+Now that you have a MATLAB License, you are ready to install. 
+\begin{enumerate}
+	\item Head to
+	      \href{https://www.mathworks.com/downloads/}{mathworks.com/downloads}, and
+	      select the version you want to download, download the latest one unless you
+	      have specific needs. An installer will be downloaded on your PC.
+	      	      
+	\item Now find the installer (usually located inside your downloads folder),
+	      and run it. This will start the guided installation process.
+	      	      
+	\item You will be asked to select a license (you probably won't have more
+	      than one)
+	      	      
+	\item Select a folder for the installation, if you are unsure, just leave
+	      the default one.
+	      	      
+	\item Select what products do you want to install; for this course you will
+	      need to install the following:
+	      \begin{itemize}
+	      	\item MATLAB
+	      	\item Datafeed Toolbox
+	      	\item Econometrics Toolbox
+	      	\item Financial Toolbox
+	      	\item Image Processing Toolbox
+	      	\item Mapping Toolbox
+		\item Optimization Toolbox		
+	      	\item Parallel Computing Toolbox
+	      	\item Risk Management Toolbox
+	      	\item Statistics and Machine Learning Toolbox
+	      \end{itemize}
+	      	      
+	\item Select additional options as you please, and begin the installation.
+	      After installing MATLAB proceed to the next section to install FSDA Toolbox.
+\end{enumerate}
+
+
+\subsection{Installing FSDA Toolbox}
+Almost there! You just need to install one last toolbox!
+
+\begin{enumerate}
+	\item In MATLAB look at the top bar, find the \textbf{Add-Ons} button and
+	      click on it
+	      
+	      \includegraphics[trim= 0 0 10cm 0, clip, width=.9\textwidth]{Addon 1.png}
+	      
+	\item The addon explorer will open up. Look for \textbf{FSDA} in the
+	      search bar. The first result is the one you want, click on it!
+	      
+	\item Click on add, the toolbox will begin installation.
+	      	
+	\item The FSDA toolbox is a very active project and gets updated often, so
+	      every once in a while, remember to use the \textbf{\texttt{tuna}} function to ensure
+	      that you have the latest release of the toolbox installed.\par
+	      To use the function, just write \textbf{\texttt{tuna}} in the command window.
+	      
+\end{enumerate}
+\section{Recordings of lessons}
+All the recordings of the course lessons will be published on Youtube, at the
+following link:
+\href{https://www.youtube.com/@marcorianiIntroDS}{youtube.com/@marcorianiIntroDS}\par
+The laboratory exercises will not be recorded.
+
+\section{Accessing the Textbook}
+
+The textbook for this course is \textit{Data Science with MATLAB}, published by
+Giappichelli Editore. It is available \textbf{only in ebook format} on the
+publisher's website.
+
+Before purchasing, you need to create a Giappichelli account to access the book
+after purchase; it will be stored in your personal library on the Giappichelli
+MyHome platform.
+
+To get the book, follow these steps:
+
+\begin{enumerate}
+	\item Visit the Giappichelli website, at
+	      \href{https://www.giappichelli.it/}{www.giappichelli.it} and register
+	      an account.
+	          
+	\item Search for \enquote{Data Science with MATLAB}. \textbf{Be careful: two very
+	similar books appear!}
+	    
+	\item Make sure to buy the one titled \textbf{\enquote{Data Science \emph{with}
+	MATLAB}} as this is the English edition required for the course.
+	    
+	\item \textbf{Do NOT buy \enquote{Data Science \emph{con} MATLAB}} as that is the
+	      Italian edition.
+	          
+	\item After purchase, you can now access your ebook from your personal
+	library at
+	\href{https://myhome.giappichelli.it/dashboard/}{myhome.giappichelli.it/dashboard}.
+	      	
+\end{enumerate}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[trim= 0 5cm 0 0, clip, width=\textwidth]{Books_marked.png}
+	\caption{Make sure you select the correct book!}
+\end{figure}
+
+\section{GitHub and additional supporting material}
+If you ever have difficulties with course material, MATLAB setup, or using the
+textbook resources, don't hesitate to ask for help! You can post questions and
+get support from your fellow students and the professor directly in the
+repository via the \enquote{Issues} section. Everyone is encouraged to participate and
+support each other.
+\subsection{GitHub}
+GitHub has become over the years the main platform where programmers share their
+projects, collaborate and communicate with each other.\par
+
+It not only acts as a place where find and download software, but also discuss,
+and collaborate on those projects together.\par
+
+A lot of the material of the book will be available at the following repository:
+\href{https://github.com/UniprJRC/DSwithMATLAB}{UniprJRC/DSwithMATLAB}. Here you
+will be able to ask questions, interact with other students and the professor
+through the GitHub repository \textbf{Issues} section, take part in challenges posted by the
+professor, and report mistakes or typos in the book.\par
+
+It is highly advised that you create a GitHub account, so that you will be able
+to participate in discussions.\par
+
+\subsection{Downloading textbook resources}
+All the files that you need are in the GitHub repository, we will now see how to
+clone them into your local MATLAB folder. This process will copy all the files
+present on GitHub in a folder on your PC.\par
+\begin{enumerate}
+	\item First of all you will need to install Git to be able to type Git commands into
+	      the MATLAB command window.
+	      
+	\item Go to \href{https://git-scm.com/install/}{git-scm.com/install}, download the
+	      version corresponding to your OS, and follow the instructions.
+	      
+	\item 
+	      Once you have installed Git, you will need to open MATLAB and type in the
+	      command window:
+	      
+\begin{lstlisting}[]
+!git clone https://github.com/UniprJRC/DSwithMATLAB
+\end{lstlisting}
+	      
+	      \includegraphics[width=.9\textwidth]{git clone.png}
+
+		  If executing this command produces the error: \textbf{fatal: could not
+		  create work tree dir  'DSwithMATLAB': permission denied}, it means
+		  that you are trying to clone the repository into a folder where you
+		  don't have writing permissions. Simply change the root folder and
+		  execute the command again.
+
+		  Another possible cause of the cloning process failing, might be that
+		  you are cloning it into a folder that is automatically syncronized
+		  with the cloud (for example by using Google Drive or OneDrive), it is
+		  not advised to clone into such folders because this might interfere
+		  with the cloning process.
+	      
+	\item Now you will see that a folder called \textbf{DSwithMATLAB} has been
+	      created in the root of your MATLAB folder, inside it you will be able to find
+	      all the contents of the textbook repository.
+	      
+\end{enumerate}
+
+\subsection{Keeping the Project \enquote{Alive}}
+
+Software has a lifecycle, and without ongoing maintenance and use, interest
+fades. We therefore encourage readers to report errors and suggest improvements
+via the book's GitHub page:
+\href{https://github.com/UniprJRC/DSwithMATLAB}{UniprJRC/DSwithMATLAB}\par
+Please file bug reports or patch proposals in the \enquote{Issues} section. We
+will respond promptly and, if need be, open a direct communication channel with
+the contributor. We thank the more than 1,000 users who have interacted via the
+Issues in the first two editions of the Italian version of the book.
+
+\end{document}
